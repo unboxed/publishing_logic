@@ -1,8 +1,22 @@
-= publishing_logic
+# publishing_logic
 
-Publishing logic for ActiveRecord models
-* Generates a migration with fields required for publishing
-  logic. Fields are:
+### Installation
+
+To install add the following to your gemfile:
+
+  gem 'publishing_logic'
+
+After installing the gem add the publishing logic fields to your model by running:
+
+  bundle exec rails generate publishing_logic_fields NAME [options]
+
+To see full documentation of generator options run
+
+  bundle exec rails generate publishing_logic:fields
+
+### Publishing logic for ActiveRecord models
+
+* Generates a migration with fields required for publishing logic. Fields are:
   * publishing_enabled:boolean
   * published_at:datetime
   * published_until:datetime (optional)
@@ -13,8 +27,9 @@ Publishing logic for ActiveRecord models
 
 The source for this gem can be found on http://github.com/unboxed/publishing_logic
 
-== Note on Patches/Pull Requests
- 
+
+### Note on Patches/Pull Requests
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a
@@ -24,6 +39,7 @@ The source for this gem can be found on http://github.com/unboxed/publishing_log
    bump version in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
 
-== Copyright
+
+### Copyright
 
 Copyright (c) 2009 Unboxed Consulting and Channel 5 Broadcasting Ltd. See LICENSE for details.

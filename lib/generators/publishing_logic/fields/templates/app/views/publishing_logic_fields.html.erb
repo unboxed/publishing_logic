@@ -2,7 +2,7 @@
   <%%= form.label :published_at %><br />
   <%%= form.datetime_select :published_at %>
 </p>
-<% if use_published_until_field %><p>
+<% if options[:published_until_field] %><p>
   <%%= form.label :published_until %><br />
   <%%= form.datetime_select :published_until %>
 </p><% end %>
