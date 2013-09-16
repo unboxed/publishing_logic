@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    publishing_logic (0.2.0)
+    publishing_logic (0.3.0)
 
 GEM
   remote: https://rubygems.org/

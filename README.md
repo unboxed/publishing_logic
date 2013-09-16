@@ -1,4 +1,5 @@
 # publishing_logic
+Requires: Ruby > v 1.9 and Rails > v 3
 
 ### Installation
 
@@ -8,7 +9,7 @@ To install add the following to your gemfile:
 
 After installing the gem add the publishing logic fields to your model by running:
 
-  bundle exec rails generate publishing_logic_fields NAME [options]
+  bundle exec rails generate publishing_logic:fields NAME [options]
 
 To see full documentation of generator options run
 
@@ -21,7 +22,7 @@ To see full documentation of generator options run
   * published_at:datetime
   * published_until:datetime (optional)
 * Defines logic on models that include PublishingLogic::ModelLogic
-  * published named scope
+  * published scope
   * published? method
   * ordering by published_at
 
