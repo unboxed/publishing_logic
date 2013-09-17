@@ -1,5 +1,5 @@
 class <%= migration_name %> < ActiveRecord::Migration
-  def self.up
+  def up
     change_table :<%= table_name %> do |t|
       t.boolean :publishing_enabled
       t.datetime :published_at<% if options[:published_until_field] %>, :published_until<% end %>
@@ -7,10 +7,10 @@ class <%= migration_name %> < ActiveRecord::Migration
     end
   end
 
-  def self.down
+  def down
     change_table :<%= table_name %> do |t|
-      t.remove :publishing_enabled, :published_at<% if options[:published_until_field] %>, :published_until<% end %>
       t.remove_index :name => 'index_<%= table_name %>_on_publishing_logic_fields'
+      t.remove :publishing_enabled, :published_at<% if options[:published_until_field] %>, :published_until<% end %>
     end
   end
 end
